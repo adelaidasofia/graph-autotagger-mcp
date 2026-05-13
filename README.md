@@ -13,11 +13,20 @@ A FastMCP server that reads a pre-computed Obsidian knowledge graph and suggests
 
 ## Install
 
+Open Claude Code, paste:
+
+    /plugin marketplace add adelaidasofia/graph-autotagger-mcp
+    /plugin install graph-autotagger-mcp@graph-autotagger-mcp
+
+After install, set `GRAPH_JSON_PATH` (see Environment variables below) and restart Claude Code, then ask:
+> "Suggest wikilinks for this note: [paste note content]"
+
+<details>
+<summary>Legacy install</summary>
+
 ```bash
 pip install fastmcp
 ```
-
-## Setup
 
 1. Clone:
    ```bash
@@ -45,6 +54,8 @@ pip install fastmcp
 
 5. Restart Claude Code, then ask:
    > "Suggest wikilinks for this note: [paste note content]"
+
+</details>
 
 ## Environment variables
 

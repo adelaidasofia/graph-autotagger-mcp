@@ -1,0 +1,15 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "graph-autotagger-mcp",
+  "owner": {
+    "name": "Mycelium AI",
+    "url": "https://myceliumai.co"
+  },
+  "plugins": [
+    {
+      "name": "graph-autotagger-mcp",
+      "source": "./",
+      "description": "FastMCP server that reads a pre-computed Obsidian knowledge graph and suggests wikilinks, God Node connections, and community memberships for vault notes. Companion to graphify."
+    }
+  ]
+}
