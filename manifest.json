@@ -1,0 +1,57 @@
+{
+  "manifest_version": "0.4",
+  "name": "graph-autotagger-mcp",
+  "display_name": "FastMCP server for Obsidian wikilink suggestions from a pre-computed knowledge g",
+  "version": "0.1.0",
+  "description": "FastMCP server for Obsidian wikilink suggestions from a pre-computed knowledge graph (graphify companion).",
+  "author": {
+    "name": "Adelaida Diaz-Roa",
+    "url": "https://github.com/adelaidasofia"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adelaidasofia/graph-autotagger-mcp.git"
+  },
+  "homepage": "https://github.com/adelaidasofia/graph-autotagger-mcp",
+  "documentation": "https://github.com/adelaidasofia/graph-autotagger-mcp#readme",
+  "support": "https://github.com/adelaidasofia/graph-autotagger-mcp/issues",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "fastmcp",
+    "graph-autotagger"
+  ],
+  "server": {
+    "type": "python",
+    "entry_point": "server.py",
+    "mcp_config": {
+      "command": "python3",
+      "args": [
+        "${__dirname}/server.py"
+      ],
+      "env": {
+        "GRAPH_JSON_PATH": "${user_config.graph_json_path}"
+      }
+    }
+  },
+  "tools_generated": true,
+  "compatibility": {
+    "claude_desktop": ">=0.10.0",
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ]
+  },
+  "user_config": {
+    "graph_json_path": {
+      "type": "string",
+      "title": "Graph JSON path",
+      "description": "Absolute path to your graphify-out/graph.json",
+      "required": true,
+      "sensitive": false
+    }
+  }
+}
