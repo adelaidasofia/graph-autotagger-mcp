@@ -11,12 +11,12 @@
   "packages": [
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/adelaidasofia/graph-autotagger-mcp/releases/latest/download/graph-autotagger-mcp.mcpb",
+      "identifier": "https://github.com/adelaidasofia/graph-autotagger-mcp/releases/download/v0.1.0/graph-autotagger-mcp.mcpb",
       "version": "0.1.0",
       "transport": {
         "type": "stdio"
       },
-      "fileSha256": "f214fa415404a9c01349f857207ab5edf62f88b08823419fe0de4532e210b556",
+      "fileSha256": "184e24d36772453a991889882af7a1ad026aabe27eb82dcc2ee5ed75fd5665c3",
       "environmentVariables": [
         {
           "name": "GRAPH_JSON_PATH",
