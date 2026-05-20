@@ -16,6 +16,7 @@
       "transport": {
         "type": "stdio"
       },
+      "fileSha256": "f214fa415404a9c01349f857207ab5edf62f88b08823419fe0de4532e210b556",
       "environmentVariables": [
         {
           "name": "GRAPH_JSON_PATH",
