@@ -1,5 +1,20 @@
 # graph-autotagger-mcp
 
+
+<!-- mycelium-badges:start -->
+
+<p>
+  <a href="https://github.com/adelaidasofia/graph-autotagger-mcp/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/adelaidasofia/graph-autotagger-mcp?color=blue"></a>
+  <a href="https://github.com/adelaidasofia/graph-autotagger-mcp/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/adelaidasofia/graph-autotagger-mcp?color=eab308"></a>
+  <a href="https://github.com/adelaidasofia/graph-autotagger-mcp/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/adelaidasofia/graph-autotagger-mcp"></a>
+  <a href="https://github.com/adelaidasofia/graph-autotagger-mcp/issues"><img alt="Open issues" src="https://img.shields.io/github/issues/adelaidasofia/graph-autotagger-mcp"></a>
+  <a href="https://pypi.org/project/adelaidasofia-graph-autotagger-mcp/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/adelaidasofia-graph-autotagger-mcp?color=blue&label=pypi"></a>
+  <a href="https://pypi.org/project/adelaidasofia-graph-autotagger-mcp/"><img alt="PyPI downloads" src="https://img.shields.io/pypi/dm/adelaidasofia-graph-autotagger-mcp?color=blue&label=downloads"></a>
+  <a href="https://myceliumai.co"><img alt="Built by Mycelium AI" src="https://img.shields.io/badge/built_by-Mycelium_AI-15B89A"></a>
+</p>
+
+<!-- mycelium-badges:end -->
+
 A FastMCP server that reads a pre-computed Obsidian knowledge graph and suggests wikilinks for your notes. Designed as a companion to [graphify](https://github.com/adelaidasofia/graphify) — run graphify to build the graph, then this MCP surfaces connections as you write.
 
 ## Tools
