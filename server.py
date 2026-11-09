@@ -344,14 +344,14 @@ def log_suggestion_decision(
 
 
 # ---------------------------------------------------------------------------
-# Self-test (run with: python3 server.py)
+# Self-test (run with: python3 server.py --self-test)
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     import sys
 
-    if len(sys.argv) == 1:
-        # Self-test mode
+    if "--self-test" in sys.argv[1:]:
+        # Self-test mode. With no flag the server serves MCP on stdio.
         TEST_TEXT = (
             "Building a marketplace for events. "
             "Budget management and revenue strategy are key themes."

@@ -39,10 +39,6 @@ After install, set `GRAPH_JSON_PATH` (see Environment variables below) and resta
 <details>
 <summary>Legacy install</summary>
 
-```bash
-pip install fastmcp
-```
-
 1. Clone:
    ```bash
    git clone https://github.com/adelaidasofia/graph-autotagger-mcp.git
@@ -55,16 +51,16 @@ pip install fastmcp
    ```
    Or pass it at registration time (see below).
 
-3. Self-test:
+3. Self-test (the launcher builds the environment from `uv.lock` on first run, downloading uv if needed):
    ```bash
-   python3 server.py
+   sh bin/uv-run python server.py --self-test
    ```
 
 4. Register with Claude Code:
    ```bash
    claude mcp add graph-autotagger -s user -- \
      env GRAPH_JSON_PATH="$HOME/vault/.graph/graph.json" \
-     python3 /path/to/graph-autotagger-mcp/server.py
+     sh /path/to/graph-autotagger-mcp/bin/uv-run python /path/to/graph-autotagger-mcp/server.py
    ```
 
 5. Restart Claude Code, then ask:
