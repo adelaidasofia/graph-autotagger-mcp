@@ -1,8 +1,12 @@
 {
   "mcpServers": {
     "graph-autotagger": {
-      "command": "python3",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/server.py"]
+      "command": "sh",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/bin/uv-run",
+        "python",
+        "${CLAUDE_PLUGIN_ROOT}/server.py"
+      ]
     }
   }
 }
