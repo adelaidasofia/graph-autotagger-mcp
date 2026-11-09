@@ -8,6 +8,7 @@ from __future__ import annotations
 import json
 import subprocess
 import sys
+import threading
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,6 +22,9 @@ def test_no_args_answers_mcp_handshake(tmp_path) -> None:
         text=True,
         cwd=tmp_path,
     )
+    # A server that stalls without closing stdout fails the test instead of hanging CI.
+    watchdog = threading.Timer(60, proc.kill)
+    watchdog.start()
     try:
         init = {
             "jsonrpc": "2.0",
@@ -47,5 +51,6 @@ def test_no_args_answers_mcp_handshake(tmp_path) -> None:
         tools = {t["name"] for t in replies[2]["result"]["tools"]}
         assert {"suggest_links", "check_god_nodes", "community_match"} <= tools
     finally:
+        watchdog.cancel()
         proc.kill()
         proc.wait()
